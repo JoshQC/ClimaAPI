@@ -11,14 +11,15 @@ const obtenerDatos = async (url) => {
 
 const crearDivClima = ({ name, coord, main, weather, wind }) => {
   const { description, icon } = weather[0];
+  const { lat, lon } = coord;
 
   let html = `
   <div class="contenedor-clima">
     <h2 class="ciudad">${name}</h2>
     <h3>Coordenadas</h3>
     <ul class="coordenadas">
-        <li>Latitud: ${coord.lat}</li>
-        <li>Longitud: ${coord.lon}</li>
+        <li>Latitud: ${lat}</li>
+        <li>Longitud: ${lon}</li>
     </ul>
     <h3>Sensacion: <span class="contenido-categoria-clima">${main.feels_like}</span></h3>
     <h3>Humedad: <span class="contenido-categoria-clima">${main.humidity}</span></h3>
@@ -26,7 +27,7 @@ const crearDivClima = ({ name, coord, main, weather, wind }) => {
     <h3>Tipo de Clima: <span class="contenido-categoria-clima">${description}</span></h3>
     <h3>Velocidad del viento: <span class="contenido-categoria-clima">${wind.speed} km</span></h3>
     <div class="contenedor-imagen-clima">
-        <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="Imagen de ${description}">
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Imagen de ${description}">
     </div>
   </div>
   `;
