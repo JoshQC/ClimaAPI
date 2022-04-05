@@ -37,7 +37,7 @@ const crearDivClima = ({ name, coord, main, weather, wind }) => {
 
 const llamarCiudades = () => {
   ciudades.map((ciudad) => {
-    let endPoint = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${key}&lang=es`;
+    let endPoint = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${key}&lang=es`;
     obtenerDatos(endPoint);
   });
 };
