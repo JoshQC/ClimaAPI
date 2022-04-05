@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  background-color: rgb(193, 241, 225);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.contenedor-clima {
+  padding: 10px;
+  background-color: rgba(47, 144, 209, 0.747);
+  margin: 50px;
+  width: fit-content;
+  border-radius: 10px;
+  line-height: 1.5;
+  display: inline-block;
+  box-shadow: 5px 5px 10px rgba(27, 82, 119, 0.747),
+    -5px -5px 10px rgba(27, 82, 119, 0.747);
+}
+
+.contenedor-imagen-clima {
+  position: relative;
+  bottom: 230px;
+  left: 230px;
+}
+
+.coordenadas li {
+  list-style: none;
+  text-indent: 20px;
+  color: white;
+}
+
+.ciudad {
+  text-align: center;
+  margin-bottom: 45px;
+  color: rgb(6, 79, 138);
+}
+
+.ciudad ~ h3 {
+  color: rgb(186, 245, 247);
+}
+
+.contenido-categoria-clima {
+  color: white;
+}
